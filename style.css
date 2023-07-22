@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'MinecraftiaRegular';
+    src: url('/assets/fonts/Minecraftia-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{  
+    font-family: 'Sora';
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.grain{
+    background-repeat: no-repeat;
+    background: linear-gradient(140deg, rgba(12,12,12,.8), rgba(12,24,124,.5)), url('data:image/svg+xml;base64,PHN2ZwogIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycKICB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluaycKICB3aWR0aD0nMzAwJyBoZWlnaHQ9JzMwMCc+CgoJPGZpbHRlciBpZD0nbicgeD0nMCcgeT0nMCc+CgkJPGZlVHVyYnVsZW5jZQoJCSAgdHlwZT0nZnJhY3RhbE5vaXNlJwoJCSAgYmFzZUZyZXF1ZW5jeT0nMC44NScKCQkgIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz4KCTwvZmlsdGVyPgoKCTxyZWN0IHdpZHRoPSczMDAnIGhlaWdodD0nMzAwJyBmaWxsPScjMDAwJy8+Cgk8cmVjdCB3aWR0aD0nMzAwJyBoZWlnaHQ9JzMwMCcgZmlsdGVyPSJ1cmwoI24pIiBvcGFjaXR5PScwLjcnLz4KPC9zdmc+Cg==');
+}
+
+h1 {
+    padding-top: 3rem;
+    text-align: center;
+    width: 100vw;
+    color: white;
+    font-size: 3.75rem !important;
+    line-height: 1;
+    margin: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-top: 4rem;
+}
+
+
+.site-footer {
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.footer-links a {
+  color: #999;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-links a i {
+  margin-right: 5px;
+}
+
+.disclaimer {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Adjust icon size if needed */
+.fab,
+.fas {
+  font-size: 18px;
+}
+
+.copy-button,
+.save-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.copy-button:hover,
+.save-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
