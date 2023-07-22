@@ -179,7 +179,7 @@ canvas.addEventListener("click", function(event) {
             preConfirm: () => {
                 const selectedOption = document.getElementById('template').value;
 
-                backgroundImage.src = `/assets/templates/${selectedOption}.png`;
+                backgroundImage.src = `assets/templates/${selectedOption}.png`;
                 backgroundImage.onload = setTimeout(() => {
                     drawCanvasWithImages()
                 }, 100);
