@@ -62,6 +62,8 @@ const textObjects = [{
     },
 ];
 
+const initialWidth = window.innerWidth;
+
 function drawCanvasWithImages() {
 
     canvas.width = backgroundImage.naturalWidth;
@@ -182,7 +184,7 @@ canvas.addEventListener("click", function(event) {
                 backgroundImage.src = `assets/templates/${selectedOption}.png`;
                 backgroundImage.onload = setTimeout(() => {
                     drawCanvasWithImages()
-                }, 100);
+                }, 250);
             },
             allowOutsideClick: () => !Swal.isLoading(),
         });
@@ -236,8 +238,6 @@ canvas.addEventListener("click", function(event) {
         const textHeight = 24; 
 
         if (isInsideText(mouseX, mouseY, textObj.x - textWidth / 2, textObj.y - 30, textWidth, textHeight)) {
-
-            console.log(textWidth)
             const input = document.createElement("input");
             input.type = "text";
             input.value = textObj.text;
@@ -260,15 +260,15 @@ canvas.addEventListener("click", function(event) {
                 canvas.parentElement.removeChild(input);
             });
 
-            input.addEventListener("focusout", function() {
-                input.remove()
-            });
+            
         }
     });
 });
 
 window.addEventListener("resize", function() {
-    this.document.querySelectorAll('#name').forEach((node) => node.remove())
+    if(this.window.innerWidth != initialWidth){
+        this.document.querySelectorAll('#name').forEach((node) => node.remove())
+    }
 });
 
 function copyCanvas() {
